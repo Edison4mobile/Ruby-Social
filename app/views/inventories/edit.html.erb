@@ -1,0 +1,18 @@
+
+<div class="row">
+  <div class="col-lg-3">
+    <%= render 'shared/user_info' %>
+  </div>
+  <div class="col-lg-6 well">
+    <h1>Editing Inventory</h1>
+
+    <%= render 'form', inventory: @inventory %>
+
+    <%= link_to 'Show', @inventory %> |
+    <%= link_to 'Back', inventories_path %>
+  </div>
+  <div class="col-lg-3">
+    <%= render 'shared/links' %>
+  </div>
+</div>
+

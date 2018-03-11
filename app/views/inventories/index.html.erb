@@ -1,0 +1,47 @@
+
+<div class="row">
+  <div class="col-lg-3">
+    <%= render 'shared/user_info' %>
+  </div>
+  <div class="col-lg-6 well">
+    <p id="notice"><%= notice %></p>
+
+    <h1>Inventories</h1>
+
+    <table>
+      <thead>
+      <tr>
+        <th class="col-md-2">Item</th>
+        <th class="col-md-2">Price</th>
+        <th class="col-md-2">Condition</th>
+        <th class="col-md-2">Description</th>
+        <th class="col-md-2">Status</th>
+        <th colspan="3"></th>
+      </tr>
+      </thead>
+
+      <tbody>
+      <% @inventories.each do |inventory| %>
+          <tr>
+            <td class="col-md-2"><%= inventory.item %></td>
+            <td class="col-md-2"><%= inventory.Price %></td>
+            <td class="col-md-2"><%= inventory.condition %></td>
+            <td class="col-md-2"><%= inventory.description %></td>
+            <td class="col-md-2"><%= inventory.status %></td>
+            <td class="inventory-button"><%= link_to 'Show', inventory  %></td>
+            <td class="inventory-button"><%= link_to 'Edit', edit_inventory_path(inventory) %></td>
+            <td class="inventory-button"><%= link_to 'Destroy', inventory, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+          </tr>
+      <% end %>
+      </tbody>
+    </table>
+
+    <br>
+
+    <%= link_to 'New Inventory', new_inventory_path %>
+  </div>
+  <div class="col-lg-3">
+    <%= render 'shared/links' %>
+  </div>
+</div>
+

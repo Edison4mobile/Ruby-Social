@@ -1,0 +1,40 @@
+<div class="row">
+  <div class="col-lg-3">
+    <%= render 'shared/user_info' %>
+  </div>
+  <div class="col-lg-6 well">
+    <p id="notice"><%= notice %></p>
+
+    <p>
+      <strong>Item:</strong>
+      <%= @inventory.item %>
+    </p>
+
+    <p>
+      <strong>Price:</strong>
+      <%= @inventory.Price %>
+    </p>
+
+    <p>
+      <strong>Condition:</strong>
+      <%= @inventory.condition %>
+    </p>
+
+    <p>
+      <strong>Description:</strong>
+      <%= @inventory.description %>
+    </p>
+
+    <p>
+      <strong>Status:</strong>
+      <%= @inventory.status %>
+    </p>
+
+    <%= link_to 'Edit', edit_inventory_path(@inventory) %> |
+    <%= link_to 'Back', inventories_path %>
+  </div>
+  <div class="col-lg-3">
+    <%= render 'shared/links' %>
+  </div>
+</div>
+
